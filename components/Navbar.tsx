@@ -3,7 +3,7 @@ export default function Navbar() {
     <nav className="flex items-center justify-between px-8 py-5 shadow-sm">
       <h1 className="text-3xl font-bold text-red-500">FoodhUb</h1>
 
-      <div className="hidden md:flex gap-6 font-medium">
+      <div className="flex gap-4 font-medium text-sm">
         <a href="#">Home</a>
         <a href="#">Restaurants</a>
         <a href="#">Offers</a>
