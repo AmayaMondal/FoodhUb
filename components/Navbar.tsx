@@ -6,6 +6,7 @@ export default function Navbar() {
       <div className="flex gap-4 font-medium text-sm">
         <a href="#">Home</a>
         <a href="#">Restaurants</a>
+
         <a href="#">Offers</a>
         <a href="#">Contact</a>
       </div>

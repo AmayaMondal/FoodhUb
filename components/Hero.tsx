@@ -28,11 +28,11 @@ export default function Hero() {
         </div>
 
         <div className="flex gap-4 mt-6">
-          <button className="bg-black text-white px-6 py-3 rounded-xl">
+          <button className="bg-black border border-white text-white px-6 py-3 rounded-xl">
             Download App
           </button>
 
-          <button className="border border-black px-6 py-3 rounded-xl">
+          <button className="bg-black border border-white text-white px-6 py-3 rounded-xl">
             Explore
           </button>
         </div>
