@@ -1,15 +1,28 @@
+"use client";
 const foods = [
   {
     name: "Burger",
     image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd",
+    link: [
+      "https://www.zomato.com/kolkata/restaurants/burger",
+      "https://www.swiggy.com/city/kolkata/burgers-dish-restaurants",
+    ],
   },
   {
     name: "Pizza",
     image: "https://images.unsplash.com/photo-1513104890138-7c749659a591",
+    link: [
+      "https://www.zomato.com/kolkata/restaurants/pizza",
+      "https://www.swiggy.com/city/kolkata/pizza-dish-restaurants",
+    ],
   },
   {
     name: "Pasta",
     image: "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9",
+    link: [
+      "https://www.zomato.com/kolkata/restaurants/pasta",
+      "https://www.swiggy.com/city/kolkata/pasta-dish-restaurants",
+    ],
   },
 ];
 
@@ -22,7 +35,7 @@ export default function PopularFoods() {
         {foods.map((food) => (
           <div
             key={food.name}
-            className="rounded-3xl overflow-hidden shadow-lg hover:scale-105 transition"
+            className=" rounded-3xl overflow-hidden shadow-lg hover:scale-105 transition"
           >
             <img
               src={food.image}
@@ -33,7 +46,15 @@ export default function PopularFoods() {
             <div className="p-5">
               <h3 className="text-2xl font-semibold">{food.name}</h3>
 
-              <button className="mt-4 bg-orange-500 text-white px-5 py-2 rounded-xl">
+              <button
+                className="mt-4 bg-orange-500 text-white px-5 py-2 rounded-xl"
+                onClick={() => {
+                  const randomLink =
+                    food.link[Math.floor(Math.random() * food.link.length)];
+
+                  window.open(randomLink, "_blank");
+                }}
+              >
                 Order Now
               </button>
             </div>

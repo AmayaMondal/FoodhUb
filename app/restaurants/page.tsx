@@ -1,5 +1,5 @@
 // app/restaurants/page.tsx
-
+"use client";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Star, Clock3 } from "lucide-react";
@@ -11,6 +11,7 @@ const restaurants = [
     rating: "4.5",
     time: "25 mins",
     cuisine: "Burgers, Fast Food",
+    link: "https://burgerking.in/product-listing",
   },
   {
     name: "Pizza Hut",
@@ -18,6 +19,7 @@ const restaurants = [
     rating: "4.3",
     time: "30 mins",
     cuisine: "Pizza, Italian",
+    link: "https://www.pizzahut.co.in/",
   },
   {
     name: "KFC",
@@ -25,27 +27,31 @@ const restaurants = [
     rating: "4.4",
     time: "20 mins",
     cuisine: "Chicken, Fast Food",
+    link: "https://online.kfc.co.in/menu",
   },
   {
-    name: "Biryani House",
+    name: "Aminia ",
     image: "https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a",
     rating: "4.7",
     time: "35 mins",
     cuisine: "Biryani, Indian",
+    link: "https://www.aminia.co.in/aminia-menu",
   },
   {
-    name: "Pasta Palace",
+    name: "Mocambo",
     image: "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9",
     rating: "4.6",
     time: "28 mins",
     cuisine: "Pasta, Italian",
+    link: "https://www.zomato.com/kolkata/mocambo-park-street-area/menu",
   },
   {
-    name: "Food Corner",
+    name: "Oudh 1950",
     image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836",
     rating: "4.2",
     time: "18 mins",
     cuisine: "Mixed Cuisine",
+    link: "https://www.oudh1590.com/menu.php",
   },
 ];
 
@@ -94,7 +100,10 @@ export default function Restaurants() {
                   </div>
                 </div>
 
-                <button className="mt-6 w-full bg-red-500 hover:bg-red-600 text-white py-3 rounded-2xl transition">
+                <button
+                  className="mt-6 w-full bg-red-500 hover:bg-red-600 text-white py-3 rounded-2xl transition"
+                  onClick={() => window.open(restaurant.link, "_blank")}
+                >
                   View Menu
                 </button>
               </div>
